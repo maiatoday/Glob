@@ -25,5 +25,5 @@ The aim of the game is to clear the screen before you disappear.
 * figure out logic :)
 
 ## Bonus tasks:
-*Make the main Glob colour change as it melds with the other globs it meets
-*make the globs shudder and wobble
+* make the main Glob colour change as it melds with the other globs it meets
+* make the globs shudder and wobble
