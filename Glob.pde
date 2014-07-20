@@ -46,9 +46,9 @@ void setup() {
   frameRate(60);
 
 
-  tip = loadImage("scrapyard2.jpg");
-  jamImage = loadImage("crate.jpeg");
-  globImage = loadImage("tux_droid.png");
+  tip = loadImage("boiling-water.jpg");
+  jamImage = loadImage("j01.png");
+  globImage = loadImage("glob.png");
   imageMode(CENTER);
 
   //initScene();
@@ -98,8 +98,8 @@ void setup() {
   detector = new CollisionDetector (physics, this);
 
   maxim = new Maxim(this);
-  globSound = maxim.loadFile("droid.wav");
-  wallSound = maxim.loadFile("wall.wav");
+  globSound = maxim.loadFile("jam1.wav");
+  wallSound = maxim.loadFile("sponge1.wav");
 
   globSound.setLooping(false);
   globSound.volume(1.0);
@@ -108,7 +108,8 @@ void setup() {
   // now an array of crate sounds
   jamSounds = new AudioPlayer[jamGlobs.length];
   for (int i=0;i<jamSounds.length;i++){
-    jamSounds[i] = maxim.loadFile("crate2.wav");
+    String f = String.format("jam%d.wav", i);
+    jamSounds[i] = maxim.loadFile(f);
     jamSounds[i].setLooping(false);
     jamSounds[i].volume(1);
   }
